@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <section id="video2"></section>
+                <script>
+                    $(document).ready(function () {
+            
+                        var key2 = 'AIzaSyA5QLGlYq1IuYkcme4RjtEs94o1uAjpuD8';
+                        var playlistId2 = 'PLLCfCwXlm68xnRKhAaw9dH_5CoJ80x4pa';
+                        var URL = 'https://www.googleapis.com/youtube/v3/playlistItems';
+            
+            
+                        var options = {
+                            part: 'snippet',
+                            key: key2,
+                            maxResults: 500,
+                            playlistId: playlistId2
+                        }
+            
+                        loadVids2();
+            
+                        function loadVids2() {
+                            $.getJSON(URL, options, function (data) {
+                                var id = data.items[0].snippet.resourceId.videoId;
+                                mainVid2(id);
+                                resultsLoop2(data);
+                            });
+                        }
+            
+                        function mainVid2(id) {
+                            $('#video2').html(`
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/${id}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        `);
+                        }
+            
+            
+                        function resultsLoop2(data) {
+            
+                            $.each(data.items, function (i, item) {
+            
+                                var thumb = item.snippet.thumbnails.medium.url;
+                                var title = item.snippet.title;
+                                var desc = item.snippet.description.substring(0, 100);
+                                var vid = item.snippet.resourceId.videoId;
+            
+            
+                                $('.main2').append(`
+                                    <article class="item" data-key="${vid}">
+            
+                                        <img src="${thumb}" alt="" class="thumb">
+                                        <div class="details">
+                                            <h4>${title}</h4>
+                                            <p>${desc}</p>
+                                        </div>
+            
+                                    </article>
+                                `);
+                            });
+                        }
+            
+                        // CLICK EVENT
+                        $('.main2').on('click', 'article', function () {
+                            var id = $(this).attr('data-key');
+                            mainVid2(id);
+                        });
+            
+            
+                    });
+                </script>
+                <main class="main2"></main>
+            </div>
+
+            <div class="col-md-6">
+                <section id="video"></section>
+                <script>
+                    $(document).ready(function () {
+            
+                        var key = 'AIzaSyA5QLGlYq1IuYkcme4RjtEs94o1uAjpuD8';
+                        var playlistId = 'PLV8g3qzGNuWh2ZT8PM86yIPiXUF71E2YP';
+                        var URL = 'https://www.googleapis.com/youtube/v3/playlistItems';
+            
+            
+                        var options = {
+                            part: 'snippet',
+                            key: key,
+                            maxResults: 500,
+                            playlistId: playlistId
+                        }
+            
+                        loadVids();
+            
+                        function loadVids() {
+                            $.getJSON(URL, options, function (data) {
+                                var id = data.items[0].snippet.resourceId.videoId;
+                                mainVid(id);
+                                resultsLoop(data);
+                            });
+                        }
+            
+                        function mainVid(id) {
+                            $('#video').html(`
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/${id}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        `);
+                        }
+            
+            
+                        function resultsLoop(data) {
+            
+                            $.each(data.items, function (i, item) {
+            
+                                var thumb = item.snippet.thumbnails.medium.url;
+                                var title = item.snippet.title;
+                                var desc = item.snippet.description.substring(0, 100);
+                                var vid = item.snippet.resourceId.videoId;
+            
+            
+                                $('.main1').append(`
+                                    <article class="item" data-key="${vid}">
+            
+                                        <img src="${thumb}" alt="" class="thumb">
+                                        <div class="details">
+                                            <h4>${title}</h4>
+                                            <p>${desc}</p>
+                                        </div>
+            
+                                    </article>
+                                `);
+                            });
+                        }
+            
+                        // CLICK EVENT
+                        $('.main1').on('click', 'article', function () {
+                            var id = $(this).attr('data-key');
+                            mainVid(id);
+                        });
+            
+            
+                    });
+                </script>
+                <main class="main1"></main>
+            </div>
+
+        </div>
+
+
+
+
+
+    </div>
+
+
+    
+
+
+</body>
+
+</html>

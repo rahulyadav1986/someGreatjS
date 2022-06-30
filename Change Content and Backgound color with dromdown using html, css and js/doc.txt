@@ -1,0 +1,9 @@
+#ff0000 - Red Color
+
+#ffb700 - Yellow Color
+
+#000000 - Black Color
+
+#8c00ff - Purpal Color
+
+#006bff - Blue Color

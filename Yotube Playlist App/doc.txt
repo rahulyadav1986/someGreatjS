@@ -1,0 +1,18 @@
+1. Project Setup
+
+2. UI Develop - Mobile First design with html and css
+ a)Part 1: HTML 
+ b)Part 2: CSS 
+ c)Part 3: Responsive Design
+
+3. Create Script for Mode(Light and Dark) and View(List View Grid View) Change
+  a)Create Light and Dark Mode by JavaScript
+  b)Create List and Grid View by JavaScript
+
+4. Create Youtube Api and Enable that Api
+
+5. Create Script(jQuery) to fetch Youtube Data
+
+6. Create Script to Load Main Video from List video
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

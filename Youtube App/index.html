@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codex Rahul</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/a992d6b247.js" crossorigin="anonymous"></script>
+</head>
+<body id="db_section">
+
+    <div class="container">
+        <div class="main_app">
+            <div class="head d-flex align-center justify-between">
+                <div class="logo d-flex align-center">
+                    <img src="images/codex_rahul.png" alt="">
+                    <div>
+                        <h1>CODEX RAHUL</h1>
+                        <div class="subscribe_button d-flex flex-column">
+                            <a  href="http://www.youtube.com/channel/UCwmScL-zapNerUJTu3Jy3bQ?sub_confirmation=1" target="_blank" class="d-flex align-center">
+                                <i class="fab fa-youtube"></i>
+                                SUBSCRIBE
+                            </a>
+                            <b id="subCount"></b>
+                        </div>
+                    </div>
+                   
+                </div>
+                <div class="right d-flex align-center justify-center" onclick="button_click()">
+                    <span class="icon fas fa-sun"></span>
+                    <span class="icon fas fa-moon"></span>
+                </div>
+            </div>
+            <div class="video_section" id="video"></div>
+            <div class="tab_back">
+                <div class="menu">
+                    <li class="tab_box active" id="menu1" data-id="content1">JavaScript Project</li>
+                    <li class="tab_box" id="menu2" data-id="content2">Tab 2</li>
+                    <li class="tab_box" id="menu3" data-id="content3">Tab 3</li>
+                    <li class="tab_box" id="menu4" data-id="content4">Tab 4</li>
+                </div>
+                <div class="tab_content_back">
+                    <div class="contenrarea active" id="content1">
+                        <ul class="video_list_section"></ul>
+                    </div>
+                    <div class="contenrarea" id="content2">
+                        <h1>Tab 2</h1>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas eos accusamus fugit possimus dolorem, totam quasi? Saepe mollitia perferendis, esse reprehenderit in, veniam voluptatibus quo ullam, dolores cupiditate nobis voluptas?
+                    </div>
+                    <div class="contenrarea" id="content3">
+                        <h1>Tab 3</h1>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas eos accusamus fugit possimus dolorem, totam quasi? Saepe mollitia perferendis, esse reprehenderit in, veniam voluptatibus quo ullam, dolores cupiditate nobis voluptas?<br><br>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas eos accusamus fugit possimus dolorem, totam quasi? Saepe mollitia perferendis, esse reprehenderit in, veniam voluptatibus quo ullam, dolores cupiditate nobis voluptas?<br><br>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas eos accusamus fugit possimus dolorem, totam quasi? Saepe mollitia perferendis, esse reprehenderit in, veniam voluptatibus quo ullam, dolores cupiditate nobis voluptas?
+                    </div>
+                    <div class="contenrarea" id="content4">
+                        <h1>Tab 4</h1>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas eos accusamus fugit possimus dolorem, totam quasi? Saepe mollitia perferendis, esse reprehenderit in, veniam voluptatibus quo ullam, dolores cupiditate nobis voluptas?<br><br>Lorem ipsum dolor sit amet consectetur, 
+                </div>
+            </div>
+            
+        </div>
+        
+        
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="youtube_api.js"></script>
+    <script src="app.js"></script>
+
+   
+    
+</body>
+</html>

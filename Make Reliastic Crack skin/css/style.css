@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+body{
+    margin: 0; padding: 0; background-color: #000;
+}
+*{
+    box-sizing: border-box;
+}
+.image_wrapper{
+    width: 100%; height: 100vh; position: relative; display: flex; align-items: center; justify-content: center;
+}
+.image_wrapper .image_back{
+    max-width: 35%; flex: 0 0 35%; width: 100%; height: 100%; position: relative;
+}
+.image_wrapper .image_back img{ 
+    width: 100%; height: 100%; position: absolute; top: 0; left: 0; object-fit: cover; 
+    object-position: center bottom;
+}
+.textured{
+    mix-blend-mode: multiply; filter: contrast(2); opacity: 0; transition: all .3s ease-in-out;
+}
+.textured.crack{
+    opacity: 1;
+}
+
+button{
+    position: absolute; top: 0; bottom: 0; left: 250px; margin: auto; background-color: transparent; 
+    cursor: pointer; border: none; outline-style: none; color: #fff;  
+    font-family: 'Bebas Neue', cursive; width: 300px; height: 95px; font-size: 48px;
+     font-weight: none; 
+}
+button::before{
+    width: 76px; height: 46px; background-color: #16d428; position: absolute; top: 0;
+    content: ""; z-index: -1; transform: translateX(-150px); transition: all .3s ease-in-out;
+}
+button::after{
+    width: 76px; height: 46px; background-color: #16d428; position: absolute;  bottom: 0;
+    content: ""; z-index: -1;  transform: translateX(74px); transition: all .3s ease-in-out;
+}
+button img{
+    position: absolute; bottom: 19px; left: -221px; width: 190px;
+}
+button.change::before{
+    background-color: #d45816; transform: translateX(74px);
+}
+button.change::after{
+    background-color: #d45816; transform: translateX(-150px);
+}
+
+
+.crackskin{
+    display: none;
+}
+.crackskin.on{
+    display: block;
+}
+.smoothskin{
+    display: block;
+}
+.smoothskin.on{
+    display: none;
+}

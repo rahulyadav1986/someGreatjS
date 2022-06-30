@@ -1,0 +1,7 @@
+.portion{
+    width: 100%;
+    border: #000 5px solid;
+}
+.portion h2{
+    color: red;
+}

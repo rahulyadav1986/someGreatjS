@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    
+    <div class="video_back">        
+      
+        <div class="image_back">
+            <img src="images/portrait-3292287_1920.jpg" alt="">
+            <img src="images/crack11.jpg" class="textured" id="texture" alt="">
+        </div>
+        
+    </div>
+    <button onclick="myFunction()" id="add_class">
+        <img src="images/click_here.png" alt="">
+        <span class="smoothskin" id="smoothskin">Crack Skin</span>
+        <span class="crackskin" id="crackskin">smooth skin</span>
+    </button>
+    
+    
+
+    <script>
+        function myFunction() {
+           var element = document.getElementById("texture");
+           var element2 = document.getElementById("smoothskin");
+           var element3 = document.getElementById("crackskin");
+           var element4 = document.getElementById("add_class");
+           element.classList.toggle("cracked");
+           element2.classList.toggle("on");
+           element3.classList.toggle("on");
+
+           element4.classList.toggle("change");
+        }
+        
+        
+        </script>
+
+    
+    
+    
+</body>
+</html>

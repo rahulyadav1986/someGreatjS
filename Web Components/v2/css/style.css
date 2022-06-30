@@ -1,0 +1,130 @@
+body {
+  margin: 0;
+  padding: 100px 0;
+  background-color: #000;
+  height: 100vh;
+  overflow-x: hidden;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.align-center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.justify-center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.flex-column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.flex-wrap {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.team_card_container {
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+  position: relative;
+}
+
+.team_card_container::before {
+  width: 300px;
+  height: 300px;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(5%, #9c27b0), to(#4a0056));
+  background-image: linear-gradient(90deg, #9c27b0 5%, #4a0056 100%);
+  border-radius: 10px;
+  position: absolute;
+  top: -147px;
+  left: -121px;
+  content: "";
+  border-radius: 100%;
+  z-index: -1;
+}
+
+.team_card_container::after {
+  width: 200px;
+  height: 200px;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(5%, #256b9c), to(#255884));
+  background-image: linear-gradient(90deg, #256b9c 5%, #255884 100%);
+  border-radius: 10px;
+  position: absolute;
+  bottom: -47px;
+  right: -39px;
+  content: "";
+  border-radius: 100%;
+  z-index: -2;
+}
+
+.card_section {
+  margin: 0 -15px;
+}
+
+codex-card {
+  -ms-flex-preferred-size: 33.33333%;
+      flex-basis: 33.33333%;
+  padding: 0 15px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+@media only screen and (max-width: 1365px) {
+  .team_card_container::before {
+    left: 50px;
+  }
+  .team_card_container::after {
+    right: 50px;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  codex-card {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    padding: 0 15px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .team_card_container::before {
+    width: 200px;
+    height: 200px;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  .team_card_container::after {
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  codex-card {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    padding: 0 15px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
